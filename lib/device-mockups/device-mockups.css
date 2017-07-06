@@ -770,3 +770,19 @@
 .device-mockup.samsung_tv.landscape > .device > .screen {
     top: 2.148803%; bottom: 12.817127%; left: 1.261956%; right: 1.361956%;
 }
+
+/* Pixel */
+.device-mockup.pixel,
+.device-mockup.pixel.portrait {
+    padding-bottom: 204.163265306%;
+}
+
+.device-mockup.pixel > .device,
+.device-mockup.pixel.portrait > .device {
+    background-image: url("pixel/pixel_port.png");
+}
+
+.device-mockup.pixel > .device > .screen,
+.device-mockup.pixel.portrait > .device > .screen {
+    top: 11.2%; bottom: 7.5%; left: 5.5%; right: 6.4%;
+}
