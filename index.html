@@ -37,6 +37,27 @@
 </head>
 
 <body id="page-top">
+    <div id="adultCheck" class="adult-overlay">
+        <div class="container adult-overlay-content">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <p class="adult-warning">您即將進入<span class="adult">成年人</span>才可以瀏覽的內容</p>
+                </div>
+
+                <div class="col-md-4 col-md-offset-2">
+                    <a class="btn btn-disagree" onclick="javascript:under18()">
+                        <span>未滿18歲</span><br><i class="fa fa-times"></i> 離開
+                    </a>
+                </div>
+
+                <div class="col-md-4">
+                    <a class="btn btn-agree" onclick="javascript:over18()">
+                        <span>我已年滿18歲</span><br><i class="fa fa-circle-o"></i> 進入
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container">

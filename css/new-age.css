@@ -466,3 +466,69 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #222222;
 }
+.adult-overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+}
+.adult-overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+.adult-overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    display: block;
+    transition: 0.3s;
+}
+.adult-overlay a:hover, .adult-overlay a:focus {
+    color: #f1f1f1;
+}
+.adult {
+    color: #FFEA00;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.adult-warning {
+    color: #FCE4EC;
+    font-size: 30px;
+    padding: 30px;
+}
+.btn-agree {
+    border-color: white;
+    border: 1px solid;
+    color: #2E7D32;
+    background-color: rgba(46,125,50,0.2);
+}
+.btn-agree:hover,
+.btn-agree:focus,
+.btn-agree:active,
+.btn-agree.active {
+  color: white;
+  background-color: #2E7D32;
+  border-color: #2E7D32;
+}
+.btn-disagree {
+    border-color: white;
+    border: 1px solid;
+    color: #C62828;
+    background-color: rgba(198,40,40,0.2);
+}
+.btn-disagree:hover,
+.btn-disagree:focus,
+.btn-disagree:active,
+.btn-disagree.active {
+  color: white;
+  background-color: #C62828;
+  border-color: #C62828;
+}

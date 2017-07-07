@@ -30,6 +30,14 @@
 
 })(jQuery); // End of use strict
 
+function under18() {
+    window.history.back();
+}
+
+function over18() {
+    $("#adultCheck").hide();
+}
+
 // Replace content if from blog post
 $(document).ready(function() {
     function getParameterByName(name, url) {
