@@ -83,8 +83,9 @@
                         <div class="device-mockup pixel portrait white">
                             <div class="device">
                                 <div class="screen">
-                                    <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                                    <img src="img/screenshot.jpg" class="img-responsive" alt="">
+                                    <a target="_blank" id="screenshot-link">
+                                        <img src="img/screenshot.jpg" class="img-responsive" alt="" id="screenshot">
+                                    </a>
                                 </div>
                                 <div class="button">
                                     <!-- You can hook the "home button" to some JavaScript events or just remove it -->
@@ -109,12 +110,12 @@
                         <div class="col-md-7 help">
                             <p>
                                 <div class="badges">
-                                    <a class="badge-link" href="https://raw.githubusercontent.com/winnepooh/stream-deploy/master/app.apk">
+                                    <a class="badge-link" href="https://raw.githubusercontent.com/winnepooh/stream-deploy/master/app.apk" id="downloadApk">
                                         <img src="./img/github-badge.png" alt="" />
                                     </a>
                                 </div>
                             </p>
-                            <p>安裝：<a href="https://youtu.be/H2Cgv0ycLy0">教學影片</a></p>
+                            <p>安裝：<a href="https://youtu.be/H2Cgv0ycLy0" id="tutorialVideo">教學影片</a></p>
                             <p>VirusTotal 掃毒報告：<a href="https://www.virustotal.com/zh-tw/url/f335d0e551b8c95c4bce16b5baf9ea23ae3f8516539c1b3e84ce75256943c8fb/analysis/1477116078/" id="downloadLinkReport">載點無毒</a>、<a href="https://www.virustotal.com/zh-tw/file/4d8ccf24883a0e6d1c7b09f4a04f1570d005115a01e93ba23efd04c562f762c6/analysis/1477115841/" id="apkReport">APK 無毒</a></p>
                         </div>
                     </div>
@@ -204,13 +205,13 @@
             <h2>我們 <i class="fa fa-heart"></i> 新朋友！</h2>
             <ul class="list-inline list-social">
                 <li class="social-twitter">
-                    <a href="https://twitter.com/winneapps" target="_blank"><i class="fa fa-twitter"></i></a>
+                    <a href="https://twitter.com/winneapps" target="_blank" id="contactByTwitter"><i class="fa fa-twitter"></i></a>
                 </li>
                 <li class="social-facebook">
-                    <a href="https://www.facebook.com/%E8%A3%B8%E4%B8%B2-1626167104352495/" target="_blank"><i class="fa fa-facebook"></i></a>
+                    <a href="https://www.facebook.com/%E8%A3%B8%E4%B8%B2-1626167104352495/" target="_blank" id="contactByFacebook"><i class="fa fa-facebook"></i></a>
                 </li>
                 <li class="social-tumblr">
-                    <a href="https://streamapps-qa.tumblr.com/" target="_blank"><i class="fa fa-tumblr"></i></a>
+                    <a href="https://streamapps-qa.tumblr.com/" target="_blank" id="contactByTumblr"><i class="fa fa-tumblr"></i></a>
                 </li>
             </ul>
         </div>
@@ -232,8 +233,76 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
     <!-- Theme JavaScript -->
-    <script src="js/new-age.min.js"></script>
+    <script src="js/new-age.js"></script>
 
+    <!-- GA tracking -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-79133089-5', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script>
+        $("#downloadApk").click(function() {
+            ga('send', {
+              hitType: 'event',
+              eventCategory: 'App',
+              eventAction: 'download',
+              eventLabel: 'Github Link'
+            });
+        });
+        $("#tutorialVideo").click(function() {
+            ga('send', {
+              hitType: 'event',
+              eventCategory: 'Tutorial',
+              eventAction: 'play',
+              eventLabel: '教學影片'
+            });
+        });
+        $("#contactByTumblr").click(function() {
+            ga('send', {
+              hitType: 'event',
+              eventCategory: 'Feedback',
+              eventAction: 'tumblrAsk',
+              eventLabel: 'Tumblr'
+            });
+        });
+        $("#contactByTwitter").click(function() {
+            ga('send', {
+              hitType: 'event',
+              eventCategory: 'Feedback',
+              eventAction: 'twitter',
+              eventLabel: 'Twitter'
+            });
+        });
+        $("#contactByFacebook").click(function() {
+            ga('send', {
+              hitType: 'event',
+              eventCategory: 'Feedback',
+              eventAction: 'facebook',
+              eventLabel: 'Facebook'
+            });
+        });
+        $("#downloadLinkReport").click(function() {
+            ga('send', {
+              hitType: 'event',
+              eventCategory: 'VirusReport',
+              eventAction: 'downloadLink',
+              eventLabel: '載點無毒'
+            });
+        });
+        $("#apkReport").click(function() {
+            ga('send', {
+              hitType: 'event',
+              eventCategory: 'VirusReport',
+              eventAction: 'apk',
+              eventLabel: 'APK 無毒'
+            });
+        });
+    </script>
 </body>
 
 </html>
