@@ -1,8 +1,3 @@
-/*!
- * Start Bootstrap - New Age v3.3.7 (http://startbootstrap.com/template-overviews/new-age)
- * Copyright 2013-2016 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
- */
 .heading-font {
   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 200;
@@ -479,10 +474,15 @@ body {
 }
 .adult-overlay-content {
     position: relative;
-    top: 25%;
+    top: 20%;
     width: 100%;
     text-align: center;
     margin-top: 30px;
+}
+@media (min-width: 992px) {
+  .adult-overlay-content {
+      top: 25%;
+  }
 }
 .adult-overlay a {
     padding: 8px;
@@ -493,6 +493,10 @@ body {
 }
 .adult-overlay a:hover, .adult-overlay a:focus {
     color: #f1f1f1;
+}
+.adult-overlay-item {
+    text-align: center;
+    margin-bottom: 20px;
 }
 .adult {
     color: #FFEA00;

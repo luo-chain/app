@@ -30,6 +30,7 @@
 
 })(jQuery); // End of use strict
 
+// Adult check
 function under18() {
     window.history.back();
 }
@@ -88,4 +89,62 @@ $(document).ready(function() {
             }
         });
     }
+});
+
+// GA
+$("#downloadApk").click(function() {
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'App',
+      eventAction: 'download',
+      eventLabel: 'Github Link'
+    });
+});
+$("#tutorialVideo").click(function() {
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'Tutorial',
+      eventAction: 'play',
+      eventLabel: '教學影片'
+    });
+});
+$("#contactByTumblr").click(function() {
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'Feedback',
+      eventAction: 'tumblrAsk',
+      eventLabel: 'Tumblr'
+    });
+});
+$("#contactByTwitter").click(function() {
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'Feedback',
+      eventAction: 'twitter',
+      eventLabel: 'Twitter'
+    });
+});
+$("#contactByFacebook").click(function() {
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'Feedback',
+      eventAction: 'facebook',
+      eventLabel: 'Facebook'
+    });
+});
+$("#downloadLinkReport").click(function() {
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'VirusReport',
+      eventAction: 'downloadLink',
+      eventLabel: '載點無毒'
+    });
+});
+$("#apkReport").click(function() {
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'VirusReport',
+      eventAction: 'apk',
+      eventLabel: 'APK 無毒'
+    });
 });
