@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>裸串</title>
+</head>
+<body>
+    <!-- jQuery -->
+    <script src="lib/jquery/jquery.min.js"></script>
+
+    <!-- Redirect -->
+    <script>
+        var params = "";
+        var index = window.location.href.indexOf("?");
+        if (index > 0) {
+            params = window.location.href.substring(index)
+        }
+        window.location.href = "https://luo-chain.github.io/app/" + (params.length > 0? params : "");
+    </script>
+</body>
+</html>
