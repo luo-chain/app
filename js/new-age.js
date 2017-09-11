@@ -73,8 +73,6 @@ $(document).ready(function() {
 
                 var post = json.response.posts[0];
 
-                console.log(post);
-
                 var linkDom = $("#screenshot-link");
                 linkDom.attr("title", post.slug);
                 linkDom.attr("href", post.post_url);
@@ -86,6 +84,8 @@ $(document).ready(function() {
                         screenshotDom.attr("src", photo.alt_sizes[0].url);
                     }
                 }
+            } else {
+                screenshotDom.attr("src", "./img/screenshot-deleted.png");
             }
         });
     }
