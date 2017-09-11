@@ -2,6 +2,7 @@
 <html amp lang="en">
 <head>
     <meta charset="utf-8">
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <title>裸串 - 低調・豐富・色情</title>
     <link rel="canonical" href="https://luo-chain.github.io/app">
@@ -15,18 +16,114 @@
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 </head>
 <body>
+<amp-analytics type="googleanalytics">
+    <script type="application/json">
+        {
+            "vars": {
+                "account": "UA-79133089-8"
+            },
+            "triggers": {
+                "trackPageview": {
+                    "on": "visible",
+                    "request": "pageview"
+                },
+                "trackClickOnDownloadApk": {
+                    "on": "click",
+                    "selector": "#downloadApk",
+                    "request": "event",
+                    "vars": {
+                        "eventCategory": "App",
+                        "eventAction": "download",
+                        "eventLabel": "Github Link"
+                    }
+                },
+                "trackClickOnTutorialVideo": {
+                    "on": "click",
+                    "selector": "#tutorialVideo",
+                    "request": "event",
+                    "vars": {
+                        "eventCategory": "Tutorial",
+                        "eventAction": "play",
+                        "eventLabel": "教學影片"
+                    }
+                },
+                "trackClickOnLinkReport": {
+                    "on": "click",
+                    "selector": "#downloadLinkReport",
+                    "request": "event",
+                    "vars": {
+                        "eventCategory": "VirusReport",
+                        "eventAction": "downloadLink",
+                        "eventLabel": "載點無毒"
+                    }
+                },
+                "trackClickOnApkReport": {
+                    "on": "click",
+                    "selector": "#apkReport",
+                    "request": "event",
+                    "vars": {
+                        "eventCategory": "VirusReport",
+                        "eventAction": "apk",
+                        "eventLabel": "APK 無毒"
+                    }
+                },
+                "trackClickOnScreenshot": {
+                    "on": "click",
+                    "selector": "#screenshot",
+                    "request": "event",
+                    "vars": {
+                        "eventCategory": "Screenshot",
+                        "eventAction": "view",
+                        "eventLabel": "螢幕截圖"
+                    }
+                },
+                "trackClickOnTwitter": {
+                    "on": "click",
+                    "selector": "#contactByTwitter",
+                    "request": "event",
+                    "vars": {
+                        "eventCategory": "Feedback",
+                        "eventAction": "twitter",
+                        "eventLabel": "Twitter"
+                    }
+                },
+                "trackClickOnFacebook": {
+                    "on": "click",
+                    "selector": "#contactByTwitter",
+                    "request": "event",
+                    "vars": {
+                        "eventCategory": "Feedback",
+                        "eventAction": "facebook",
+                        "eventLabel": "Facebook"
+                    }
+                },
+                "trackClickOnTumblr": {
+                    "on": "click",
+                    "selector": "#contactByTumblr",
+                    "request": "event",
+                    "vars": {
+                        "eventCategory": "Feedback",
+                        "eventAction": "tumblrAsk",
+                        "eventLabel": "Tumblr"
+                    }
+                }
+            }
+        }
+    </script>
+</amp-analytics>
+
 <h1>裸串: 用最低調的方式把豐富的 18 禁內容放進您的口袋</h1>
 
 <h2>下載</h2>
 <ul>
     <li>
-        <p>連結: <a href="https://raw.githubusercontent.com/luo-chain/apk/master/app.apk" target="_blank">APK</a>  (右鍵/長按 -> 下載連結)</p>
+        <p>連結: <a href="https://raw.githubusercontent.com/luo-chain/apk/master/app.apk" target="_blank" id="downloadApk">APK</a>  (右鍵/長按 -> 下載連結)</p>
     </li>
     <li>
-        <p>安裝: <a href="https://youtu.be/H2Cgv0ycLy0" target="_blank">教學影片</a></p>
+        <p>安裝: <a href="https://youtu.be/H2Cgv0ycLy0" target="_blank" id="tutorialVideo">教學影片</a></p>
     </li>
     <li>
-        <p>VirusTotal 掃毒報告: <a href="https://www.virustotal.com/zh-tw/url/f335d0e551b8c95c4bce16b5baf9ea23ae3f8516539c1b3e84ce75256943c8fb/analysis/1499428211/" target="_blank">載點無毒</a>、<a href="https://www.virustotal.com/zh-tw/file/ef52b54b5fb9fd94e1d129488cff587eab3555c8b2399286cb6632aefaedc36f/analysis/1499428321/" target="_blank">APK 無毒</a></p>
+        <p>VirusTotal 掃毒報告: <a href="https://www.virustotal.com/zh-tw/url/f335d0e551b8c95c4bce16b5baf9ea23ae3f8516539c1b3e84ce75256943c8fb/analysis/1499428211/" target="_blank" id="downloadLinkReport">載點無毒</a>、<a href="https://www.virustotal.com/zh-tw/file/ef52b54b5fb9fd94e1d129488cff587eab3555c8b2399286cb6632aefaedc36f/analysis/1499428321/" target="_blank" id="apkReport">APK 無毒</a></p>
     </li>
 </ul>
 
@@ -51,20 +148,20 @@
         <p class="text-muted">自拍、番號片、<br>漫畫、動畫、小說、<br>正妹照、成人節目⋯</p>
     </li>
     <li>
-        <p><a href="https://luo-chain.github.io/app/img/screenshot.jpg" target="_blank">螢幕截圖</a></p>
+        <p><a href="https://luo-chain.github.io/app/img/screenshot.jpg" target="_blank" id="screenshot">螢幕截圖</a></p>
     </li>
 </ul>
 
 <h2>追蹤</h2>
 <ul>
     <li>
-        <p><a href="https://twitter.com/winneapps" target="_blank">Twitter</a></p>
+        <p><a href="https://twitter.com/winneapps" target="_blank" id="contactByTwitter">Twitter</a></p>
     </li>
     <li>
-        <p><a href="https://www.facebook.com/luo.chain/" target="_blank">Facebook</a></p>
+        <p><a href="https://www.facebook.com/luo.chain/" target="_blank" id="contactByFacebook">Facebook</a></p>
     </li>
     <li>
-        <p><a href="https://streamapps-qa.tumblr.com/" target="_blank">Tumblr</a></p>
+        <p><a href="https://streamapps-qa.tumblr.com/" target="_blank" id="contactByTumblr">Tumblr</a></p>
     </li>
 </ul>
 
