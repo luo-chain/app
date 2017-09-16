@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>裸串</title>
+    <style>
+        body {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" id="openLink">開啟連結</a>
+
+    <script>
+        function getParameterByName(name, url) {
+            if (!url) {
+                url = window.location.href;
+            }
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+            if (!results) {
+                return null;
+            }
+            if (!results[2]) {
+                return '';
+            }
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        var url = "intent://content/" + getParameterByName("k")
+            + "#Intent;scheme=winneapps"
+            + ";package=tumblr.nakedwinne.stream"
+            + ";action=android.intent.action.VIEW"
+            + ";end";
+
+        document.getElementById("openLink").href = url;
+    </script>
+</body>
+</html>
