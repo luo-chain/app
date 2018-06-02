@@ -146,11 +146,11 @@ header {
   width: 100%;
   min-height: auto;
   overflow-y: hidden;
-  background: url("../img/bg-pattern.png"), #C2185B;
+  background: url("../img/bg-pattern.png"), #111111;
   /* fallback for old browsers */
-  background: url("../img/bg-pattern.png"), -webkit-linear-gradient(to left, #000000, #C2185B);
+  background: url("../img/bg-pattern.png"), -webkit-linear-gradient(to left, #000000, #111111);
   /* Chrome 10-25, Safari 5.1-6 */
-  background: url("../img/bg-pattern.png"), linear-gradient(to left, #000000, #C2185B);
+  background: url("../img/bg-pattern.png"), linear-gradient(to left, #000000, #111111);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: white;
 }
@@ -310,7 +310,7 @@ section.cta {
   -o-background-size: cover;
   background-position: center;
   background-image: url('../img/bg-cta.jpg');
-  padding: 250px 0;
+  padding: 400px 0;
 }
 section.cta .cta-content {
   position: relative;
@@ -406,7 +406,7 @@ footer ul li a.active {
   text-decoration: none;
 }
 .bg-primary {
-  background: #AD1457;
+  background: #222222;
 }
 .text-primary {
   color: #F48FB1;
