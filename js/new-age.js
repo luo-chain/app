@@ -89,6 +89,11 @@ $(document).ready(function() {
             }
         });
     }
+
+    var cover = getParameterByName("cover");
+    if (cover) {
+        $("#screenshot").attr("src", atob(cover));
+    }
 });
 
 // GA
